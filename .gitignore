@@ -1,5 +1,11 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore the package-lock.json file (generally not recommended)
+package-lock.json
+
 # Compiled output
 /dist
 /tmp
