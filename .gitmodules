@@ -1,0 +1,3 @@
+[submodule "first-angular-app"]
+	path = first-angular-app
+	url = git@github.com:fouchimi/Angular.git
