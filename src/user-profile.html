@@ -1,0 +1,6 @@
+<h1 id="user-header">Profile for {{ userName() }}</h1>
+<h1 hidden id="admin-header" >Profile for {{ admin() }}</h1>
+<p>This is user profile page</p>
+<button [disabled]="!isValidUserId()">Save Changes</button>
+<button (click)="cancelSubscription($event)">Cancel cancelSubscription</button>
+<button (click)="toggle($event)">Switch to admin Settings</button>
