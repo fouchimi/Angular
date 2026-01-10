@@ -10,8 +10,21 @@ class Employee {
         this.name = name;
         this.address = address;
     }
+
+    getNameWithAddress() : [string, string] {
+        return [this.name, this.address];
+    }
+
+    getEmployeeWithCreds() {
+        return `${this.id} ${this.name} ${this.address}`;
+    }
 }
 
 let john = new Employee(1, 'John', 'Highway 71');
 
 console.log(john);
+
+let nameWithAddress = john.getNameWithAddress();
+console.log(nameWithAddress[0], nameWithAddress[1]);
+
+console.log(john.getEmployeeWithCreds());
