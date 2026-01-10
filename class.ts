@@ -1,12 +1,12 @@
 export {}
 
 class Employee {
-    id: number;
-    name: string;
+    #id: number;
+    protected name: string;
     address: string;
 
     constructor(id : number, name: string, address: string) {
-        this.id = id;
+        this.#id = id;
         this.name = name;
         this.address = address;
     }
@@ -16,7 +16,17 @@ class Employee {
     }
 
     getEmployeeWithCreds() {
-        return `${this.id} ${this.name} ${this.address}`;
+        return `${this.#id} ${this.name} ${this.address}`;
+    }
+}
+
+class Manager extends Employee  {
+    constructor(id: number, name: string, address: string) {
+        super(id, name, address);
+    }
+
+    getEmployeeWithCreds() {
+        return `${this.name} ${this.address}`;
     }
 }
 
@@ -28,3 +38,7 @@ let nameWithAddress = john.getNameWithAddress();
 console.log(nameWithAddress[0], nameWithAddress[1]);
 
 console.log(john.getEmployeeWithCreds());
+
+let fouchimi = new Manager(2, 'Fouchimi', '3066 Hayden Rd');
+console.log(fouchimi);
+console.log(fouchimi.getEmployeeWithCreds());
