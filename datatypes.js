@@ -18,3 +18,5 @@ var numList;
 numList = [1, 2, 3, 4, 5];
 var res = numList.filter(function (num) { return num > 2; });
 console.log(res);
+var num = res.find(function (num) { return num === 4; });
+console.log(num);

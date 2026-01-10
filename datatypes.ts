@@ -32,3 +32,7 @@ numList = [1, 2, 3, 4, 5];
 let res = numList.filter((num) => num > 2);
 
 console.log(res);
+
+let num = res.find((num) => num === 4);
+
+console.log(num);
