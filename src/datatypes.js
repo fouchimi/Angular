@@ -1,0 +1,43 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var lastName = 'Santosh';
+var newName = lastName.toUpperCase();
+console.log(newName);
+var age;
+age = 25;
+age = 25.5;
+console.log("age", age);
+var dob = "25";
+var result = parseInt(dob);
+var isValid = false;
+console.log("result: " + result);
+var empList;
+empList = ["Fouchimi", "Nvuh", "Ousmane"];
+empList = empList.filter(function (name) { return name.length >= 5; });
+console.log("empList", empList);
+var numList;
+numList = [1, 2, 3, 4, 5];
+var res = numList.filter(function (num) { return num > 2; });
+console.log(res);
+var num = res.find(function (num) { return num === 4; });
+console.log(num);
+var sum = numList.reduce(function (acc, num) { return acc + num; });
+console.log("Sum: ", sum);
+var c = 2 /* Color.Blue */;
+var swapNumbs;
+function swapNumbers(num1, num2) {
+    return [num2, num1];
+}
+swapNumbs = swapNumbers(10, 20);
+console.log(swapNumbs);
+var firstNumber = swapNumbs[0];
+var secondNumber = swapNumbs[1];
+console.log(firstNumber, secondNumber);
+var department;
+department = "CSE";
+department = 10;
+function add(num1, num2) {
+    return num1 + num2;
+}
+var newsum = add(5, 2);
+console.log("newsum", newsum);
