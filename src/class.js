@@ -38,7 +38,7 @@ var Employee = /** @class */ (function () {
         return [this.name, this.address];
     };
     Employee.prototype.getEmployeeWithCreds = function () {
-        return "".concat(__classPrivateFieldGet(this, _Employee_id, "f"), " ").concat(this.name, " ").concat(this.address);
+        return "".concat(this.name, " ").concat(this.address.street, " ").concat(this.address.city, " ").concat(this.address.state, " ").concat(this.address.zipCode);
     };
     Employee.getEmployeeCount = function () {
         return 50;
@@ -62,18 +62,19 @@ var Manager = /** @class */ (function (_super) {
         return _super.call(this, id, name, address) || this;
     }
     Manager.prototype.getEmployeeWithCreds = function () {
-        return "".concat(this.name, " ").concat(this.address);
+        return "".concat(this.name, " ").concat(this.address.street, " ").concat(this.address.city, " ").concat(this.address.state, " ").concat(this.address.zipCode);
     };
     return Manager;
 }(Employee));
-var john = new Employee(1, 'John', 'Highway 71');
+var employeeAddress = { street: '3066 Hayden road', city: 'Columbus', state: 'OH', zipCode: '43235' };
+var john = new Employee(1, 'John', employeeAddress);
 console.log(john);
 john.empId = 100;
 console.log("John new Employee Id", john.empId);
 var nameWithAddress = john.getNameWithAddress();
 console.log(nameWithAddress[0], nameWithAddress[1]);
 console.log(john.getEmployeeWithCreds());
-var fouchimi = new Manager(2, 'Fouchimi', '3066 Hayden Rd');
+var fouchimi = new Manager(2, 'Fouchimi', employeeAddress);
 console.log(fouchimi);
 console.log(fouchimi.getEmployeeWithCreds());
 console.log("Employee count: ", Employee.getEmployeeCount());

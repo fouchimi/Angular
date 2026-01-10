@@ -1,22 +1,29 @@
 export {}
 
+interface Address {
+    street : string;
+    city : string;
+    state: string;
+    zipCode: string;
+}
+
 class Employee {
     #id: number;
     protected name: string;
-    address: string;
+    address: Address;
 
-    constructor(id : number, name: string, address: string) {
+    constructor(id : number, name: string, address: Address) {
         this.#id = id;
         this.name = name;
         this.address = address;
     }
 
-    getNameWithAddress() : [string, string] {
+    getNameWithAddress() : [string, Address] {
         return [this.name, this.address];
     }
 
     getEmployeeWithCreds() : string {
-        return `${this.#id} ${this.name} ${this.address}`;
+        return `${this.name} ${this.address.street} ${this.address.city} ${this.address.state} ${this.address.zipCode}`;
     }
 
     static getEmployeeCount() : number {
@@ -33,16 +40,18 @@ class Employee {
 }
 
 class Manager extends Employee  {
-    constructor(id: number, name: string, address: string) {
+    constructor(id: number, name: string, address: Address) {
         super(id, name, address);
     }
 
     override getEmployeeWithCreds() : string {
-        return `${this.name} ${this.address}`;
+        return `${this.name} ${this.address.street} ${this.address.city} ${this.address.state} ${this.address.zipCode}`;
     }
 }
 
-let john = new Employee(1, 'John', 'Highway 71');
+let employeeAddress = { street : '3066 Hayden road', city: 'Columbus', state: 'OH', zipCode: '43235'};
+
+let john = new Employee(1, 'John', employeeAddress);
 
 console.log(john);
 
@@ -55,7 +64,7 @@ console.log(nameWithAddress[0], nameWithAddress[1]);
 
 console.log(john.getEmployeeWithCreds());
 
-let fouchimi = new Manager(2, 'Fouchimi', '3066 Hayden Rd');
+let fouchimi = new Manager(2, 'Fouchimi', employeeAddress);
 console.log(fouchimi);
 console.log(fouchimi.getEmployeeWithCreds());
 
