@@ -20,3 +20,5 @@ var res = numList.filter(function (num) { return num > 2; });
 console.log(res);
 var num = res.find(function (num) { return num === 4; });
 console.log(num);
+var sum = numList.reduce(function (acc, num) { return acc + num; });
+console.log("Sum: ", sum);

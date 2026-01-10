@@ -36,3 +36,7 @@ console.log(res);
 let num = res.find((num) => num === 4);
 
 console.log(num);
+
+let sum = numList.reduce((acc, num) => acc + num);
+
+console.log("Sum: ", sum);
