@@ -9,6 +9,8 @@ let age: number;
 age = 25;
 age = 25.5
 
+console.log("age", age);
+
 let dob : string = "25";
 
 let result = parseInt(dob);
@@ -61,3 +63,15 @@ let firstNumber = swapNumbs[0];
 let secondNumber = swapNumbs[1];
 
 console.log(firstNumber, secondNumber);
+
+let department: any;
+department = "CSE";
+department = 10;
+
+function add(num1: number, num2: number) : number {
+    return num1 + num2;
+}
+
+let newsum = add(5, 2);
+
+console.log("newsum", newsum);

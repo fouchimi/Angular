@@ -6,6 +6,7 @@ console.log(newName);
 var age;
 age = 25;
 age = 25.5;
+console.log("age", age);
 var dob = "25";
 var result = parseInt(dob);
 var isValid = false;
@@ -32,3 +33,11 @@ console.log(swapNumbs);
 var firstNumber = swapNumbs[0];
 var secondNumber = swapNumbs[1];
 console.log(firstNumber, secondNumber);
+var department;
+department = "CSE";
+department = 10;
+function add(num1, num2) {
+    return num1 + num2;
+}
+var newsum = add(5, 2);
+console.log("newsum", newsum);
