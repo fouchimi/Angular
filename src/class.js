@@ -53,6 +53,14 @@ var Employee = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    Employee.prototype.login = function () {
+        return {
+            name: 'Fouchimi Nvuh Ousmane',
+            age: 20,
+            id: 1,
+            email: 'fousmane@gmail.com'
+        };
+    };
     return Employee;
 }());
 _Employee_id = new WeakMap();
@@ -78,3 +86,4 @@ var fouchimi = new Manager(2, 'Fouchimi', employeeAddress);
 console.log(fouchimi);
 console.log(fouchimi.getEmployeeWithCreds());
 console.log("Employee count: ", Employee.getEmployeeCount());
+console.log("Call login method", john.login());
