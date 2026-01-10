@@ -22,3 +22,13 @@ var num = res.find(function (num) { return num === 4; });
 console.log(num);
 var sum = numList.reduce(function (acc, num) { return acc + num; });
 console.log("Sum: ", sum);
+var c = 2 /* Color.Blue */;
+var swapNumbs;
+function swapNumbers(num1, num2) {
+    return [num2, num1];
+}
+swapNumbs = swapNumbers(10, 20);
+console.log(swapNumbs);
+var firstNumber = swapNumbs[0];
+var secondNumber = swapNumbs[1];
+console.log(firstNumber, secondNumber);

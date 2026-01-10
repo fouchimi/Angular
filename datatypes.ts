@@ -40,3 +40,24 @@ console.log(num);
 let sum = numList.reduce((acc, num) => acc + num);
 
 console.log("Sum: ", sum);
+
+const enum Color {
+    Red, Green, Blue
+}
+
+let c: Color = Color.Blue;
+
+let swapNumbs: [number, number];
+
+function swapNumbers(num1 : number, num2 : number) : [number, number] {
+    return [num2, num1];
+}
+
+swapNumbs = swapNumbers(10, 20);
+
+console.log(swapNumbs);
+
+let firstNumber = swapNumbs[0];
+let secondNumber = swapNumbs[1];
+
+console.log(firstNumber, secondNumber);
