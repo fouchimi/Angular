@@ -14,3 +14,6 @@ var employee = {
     salary: 190000
 };
 console.log("Employee", employee);
+var _a = { name: "john", id: 1, email: "leboss@gmail.com" }, userName = _a.name, email = _a.email;
+console.log("userName", userName);
+console.log("email", email);

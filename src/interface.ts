@@ -29,6 +29,11 @@ const employee : IEmployee = {
 
 console.log("Employee", employee);
 
+let { name : userName, email } : User = {name: "john", id: 1, email: "leboss@gmail.com"};
+
+console.log("userName", userName);
+console.log("email", email);
+
 export interface Login {
     login() : User;
 }
